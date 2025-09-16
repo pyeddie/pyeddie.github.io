@@ -40,7 +40,14 @@
     <audio controls loop preload="auto">
         <source src="alien_wander.wav" type="audio/wav">
     </audio>
-  <button onclick="playSound()">Click Me</button>
+  <script>
+    const sound = document.getElementById("clickSound");
+
+    document.addEventListener("click", () => {
+      sound.currentTime = 0; // restart if user clicks fast
+      sound.play();
+    });
+  </script>
 
   <audio id="clickSound">
     <source src="click.mp3" type="audio/mpeg">
