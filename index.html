@@ -22,11 +22,7 @@
     <audio controls loop preload="auto">
         <source src="alien_happy.wav" type="audio/mpeg">
     </audio>
-    <audio controls loop preload="auto">
-        <source src="alien_wander.wav" type="audio/mpeg">
-    </audio>
-  <body>
-  <img id="followImage" src="alien.png" alt="Follow Mouse">
+    <img id="followImage" src="alien.png" alt="Follow Mouse">
 
   <script>
     const image = document.getElementById("followImage");
@@ -41,5 +37,10 @@
       image.style.transform = `rotate(${degrees}deg)`;
     });
   </script>
+    <audio controls loop preload="auto">
+        <source src="alien_wander.wav" type="audio/mpeg">
+    </audio>
+  <body>
+  
 </body>
 </html>
