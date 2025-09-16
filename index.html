@@ -19,9 +19,6 @@
     <p> email me if you wanna know anything else:</p>
     <p> pydrunk@gmail.com</p>
     
-    <audio controls loop preload="auto">
-        <source src="alien_happy.wav" type="audio/mpeg">
-    </audio>
     <img id="followImage" src="alien.png" alt="Follow Mouse">
 
   <script>
@@ -37,9 +34,15 @@
       image.style.transform = `rotate(${degrees}deg)`;
     });
   </script>
-    <audio controls loop preload="auto">
-        <source src="alien_wander.wav" type="audio/wav">
-    </audio>
+
+  <audio id = "newsound">
+    <source src="alien_wander.wav" type="audio.wav">
+  </audio>
+  <script>
+    const sound = document.getElementById("newsound");
+    sound.currentTime = 0;
+    sound.play();
+  </script>
   <audio id="clickSound">
     <source src="alien_happy.wav" type="audio/wav">
   </audio>
