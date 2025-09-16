@@ -38,8 +38,23 @@
     });
   </script>
     <audio controls loop preload="auto">
-        <source src="alien_wander.wav" type="audio/mpeg">
+        <source src="alien_wander.wav" type="audio/wav">
     </audio>
+  <button onclick="playSound()">Click Me</button>
+
+  <audio id="clickSound">
+    <source src="click.mp3" type="audio/mpeg">
+    <source src="click.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function playSound() {
+      const sound = document.getElementById("clickSound");
+      sound.currentTime = 0; 
+      sound.play();
+    }
+  </script>
   <body>
   
 </body>
