@@ -22,8 +22,28 @@
     <audio controls loop preload="auto">
         <source src="alien_happy.wav" type="audio/mpeg">
     </audio>
-    <img src = "alien.png" alt = "stupid alien">
     <audio controls loop preload="auto">
         <source src="alien_wander.wav" type="audio/mpeg">
     </audio>
+  <body>
+  <img id="followImage" src="alien.png" alt="Follow Mouse">
+
+  <script>
+    const image = document.getElementById("followImage");
+
+    document.addEventListener("mousemove", (event) => {
+      // Get center of the image
+      const rect = image.getBoundingClientRect();
+      const imageX = rect.left + rect.width / 2;
+      const imageY = rect.top + rect.height / 2;
+
+      // Angle between mouse and image center
+      const angle = Math.atan2(event.clientY - imageY, event.clientX - imageX);
+
+      // Convert radians to degrees and rotate
+      const degrees = angle * (180 / Math.PI);
+      image.style.transform = `rotate(${degrees}deg)`;
+    });
+  </script>
+</body>
 </html>
