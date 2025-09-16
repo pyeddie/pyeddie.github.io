@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-    <h2> lowkey this website is WIP</h2>
-    <p>rohit stinks tbf</p>
-    <p> if you want to help test opening hours then email me:</p>
-    <p> pydrunk@gmail.com</p>
-
-</html>
+theme: jekyll-theme-minimal
+title: opening hours
+description: lowkey this website is WIP
