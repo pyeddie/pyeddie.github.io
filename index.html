@@ -40,26 +40,19 @@
     <audio controls loop preload="auto">
         <source src="alien_wander.wav" type="audio/wav">
     </audio>
+  <audio id="clickSound">
+    <source src="alien_happy.wav" type="audio/wav">
+  </audio>
   <script>
     const sound = document.getElementById("clickSound");
 
     document.addEventListener("click", () => {
-      sound.currentTime = 0; // restart if user clicks fast
+      sound.currentTime = 0; 
       sound.play();
     });
   </script>
 
-  <audio id="clickSound">
-    <source src="alien_happy.wav" type="audio/mpeg">
-  </audio>
 
-  <script>
-    function playSound() {
-      const sound = document.getElementById("clickSound");
-      sound.currentTime = 0; 
-      sound.play();
-    }
-  </script>
   <body>
   
 </body>
