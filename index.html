@@ -32,15 +32,11 @@
     const image = document.getElementById("followImage");
 
     document.addEventListener("mousemove", (event) => {
-      // Get center of the image
       const rect = image.getBoundingClientRect();
       const imageX = rect.left + rect.width / 2;
       const imageY = rect.top + rect.height / 2;
-
-      // Angle between mouse and image center
       const angle = Math.atan2(event.clientY - imageY, event.clientX - imageX);
 
-      // Convert radians to degrees and rotate
       const degrees = angle * (180 / Math.PI);
       image.style.transform = `rotate(${degrees}deg)`;
     });
